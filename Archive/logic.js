@@ -14,15 +14,15 @@ var randomWord = function(gameWordsArray) {
 
 // checking if guessed letter is correct 
 
-function isCorrectGuess(Word, letter) {
-    if(Word.indexOf(letter)!== -1) {
-        return true;
-    }
-    return false;
-}
+// function isCorrectGuess(Word, letter) {
+//     if(Word.indexOf(letter)!== -1) {
+//         return true;
+//     }
+//     return false;
+// }
 // return new RegExp(letter, "gi").test(word)
 
-function otherCorrectGuess(word, letter){
+function isCorrectGuess(word, letter){
     // for(var i = 0; i < word.length; i++){
         if (word.match(letter)){
             return true
