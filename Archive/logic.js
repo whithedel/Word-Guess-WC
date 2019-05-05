@@ -100,6 +100,8 @@ function hasLost(guessesLeft) {
     }
 };
 
+//letting me know if i should start a new round 
+
 function isEndOfRound(round) {
     var won=hasWon(round.puzzleState);
     var lost=hasLost(round.guessesLeft);
@@ -112,6 +114,10 @@ function isEndOfRound(round) {
     
 };
 
+
+//track higher-level information
+
+
 function setupGame(gameArr,numWin,numLost) {
     var gameObj = {
         words:gameArr,
@@ -122,6 +128,8 @@ function setupGame(gameArr,numWin,numLost) {
     }
     return gameObj;
 };
+
+//start a new round on the game
 
 function startNewRound(theRound) {
     var won=hasWon(theRound.round.puzzleState);
@@ -136,5 +144,8 @@ function startNewRound(theRound) {
     }
 
     };
+
+
+//updates the game when user interacts with it. 
 
 var myGame = setupGame(gameWords,0,0);
